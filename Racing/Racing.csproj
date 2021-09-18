@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <TieredCompilation>false</TieredCompilation>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+
+    <None Remove="Icon.ico" />
+    <None Remove="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <TrimmerRootAssembly Include="Microsoft.Xna.Framework.Content.ContentTypeReader" Visible="false" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641" />
+    <PackageReference Include="Undine.Core" Version="0.0.0.1" />
+    <PackageReference Include="Undine.DefaultEcs" Version="1.0.0" />
+    <PackageReference Include="Undine.LeopotamEcs" Version="0.0.0.1" />
+    <PackageReference Include="Undine.LilyPath" Version="1.0.1" />
+    <PackageReference Include="Undine.MinEcs" Version="1.0.0" />
+    <PackageReference Include="Undine.MonoGame" Version="0.0.2" />
+    <PackageReference Include="Undine.MonoGame.Penumbra.DesktopGL" Version="0.0.1" />
+    <PackageReference Include="Undine.VelcroPhysics.MonoGame" Version="0.0.4" />
+    <PackageReference Include="VelcroPhysics.MonoGame" Version="0.2.2-CI-20210406-134555" />
+  </ItemGroup>
+</Project>
